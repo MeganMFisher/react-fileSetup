@@ -9,7 +9,7 @@ app.use(cors());
 
 //cors
 
-var arr = [1, 2, 3, 4];
+var arr = [{ num: 1 }, { num: 2 }, { num: 3 }, { num: 4 }];
 
 
 app.get('/api/numbers', (req, res) => {

@@ -16,7 +16,7 @@ class App extends Component {
   componentDidMount() {
     getNumbers().then(response => {
       this.setState({
-        numbers: response
+        numbers: response.data
       })
       console.log(this.state.numbers)
     })
@@ -24,15 +24,21 @@ class App extends Component {
 
 
   render() {
+    
+        const numbers = this.state.numbers.map((num, i) => (
+            <div key={i}>
+                <h3>{ num.num }</h3>
+            </div>
+        ))
+
+
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+           { numbers } 
       </div>
     );
   }
