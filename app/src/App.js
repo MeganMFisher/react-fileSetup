@@ -25,11 +25,11 @@ class App extends Component {
 
   render() {
     
-        const numbers = this.state.numbers.map((num, i) => (
-            <div key={i}>
-                <h3>{ num.num }</h3>
-            </div>
-        ))
+        // const numbers = this.state.numbers.map((num, i) => (
+        //     <div key={i}>
+        //         <h3>{ num.num }</h3>
+        //     </div>
+        // ))
 
 
     return (
@@ -38,7 +38,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-           { numbers } 
+           {/* { numbers }  */}
       </div>
     );
   }

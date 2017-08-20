@@ -4,12 +4,11 @@ const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
-// app.use( express.static( __dirname + '/../public/' ) )
 app.use(cors());
 
-//cors
 
-var arr = [{ num: 1 }, { num: 2 }, { num: 3 }, { num: 4 }];
+var arr = [{ num: 1 }, { num: 2 }, { num: 3 }, { num: 4 }, { num: 5 } ];
+
 
 
 app.get('/api/numbers', (req, res) => {
